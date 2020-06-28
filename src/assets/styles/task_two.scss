@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 100px;
+
+  &__item {
+    margin-top: 8px;
+  }
+
+  &_margin-right {
+    margin-right: 8px;
+  }
+}
