@@ -45,11 +45,7 @@
             createEmailStrings(){
                 let that = this;
                 that.emailFirstPart = that.email.substring(0, that.email.indexOf('@'));
-
-                if(that.email.indexOf('@') > 0){
-                    that.emailSecondPart = that.email.substring(that.email.indexOf('@'), that.email.length);
-                }
-
+                that.emailSecondPart = that.email.substring(that.email.indexOf('@'), that.email.length);
                 that.mailto = 'mailto:' + that.email + '?subject=That was an easy Task, Systaro!'
             }
         }
