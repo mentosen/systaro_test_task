@@ -21,8 +21,8 @@
 </template>
 
 <script>
-    import {getPosts, getComments} from "@/api/mainApi";
-    import Comment from "@/components/CommentComponent";
+    import {getPosts, getComments} from "@/api/jsonPlaceHolderApi";
+    import Comment from "@/components/post/CommentComponent";
 
     export default {
         name: "PostsPage",
@@ -49,7 +49,8 @@
 
                 getPosts().then(response => {
                     that.posts = response.data;
-                    that.postsPerPage = response.data;
+
+                    that.getPostsPerPage();
                     that.pagination.total = that.posts.length;
                     that.pagination.total_pages = Math.ceil(that.posts.length / that.perPageCount);
                 })
@@ -62,6 +63,10 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.scroll{
+    scroll-behavior: smooth;
+    overflow: visible;
+    overflow-y: auto;
+}
 </style>

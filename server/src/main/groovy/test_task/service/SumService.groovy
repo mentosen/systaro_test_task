@@ -1,6 +1,7 @@
-package test_task
+package test_task.service
 
 import org.springframework.stereotype.Service
+import test_task.dto.SumDto
 
 @Service
 class SumService {

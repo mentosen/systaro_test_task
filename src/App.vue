@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <button class="btn btn_margin-right" @click="pushByRoute('/')">Task 1</button>
-    <button class="btn btn_margin-right" @click="pushByRoute('/task/2')">Task 2</button>
-    <button class="btn" @click="pushByRoute('/task/3')">Task 3</button>
+      <div>
+          <button class="btn btn_margin-right" @click="pushByRoute('/')">Task 1</button>
+          <button class="btn btn_margin-right" @click="pushByRoute('/task/2')">Task 2</button>
+          <button class="btn" @click="pushByRoute('/task/3')">Task 3</button>
+      </div>
     <router-view/>
   </div>
 </template>

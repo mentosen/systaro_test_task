@@ -863,21 +863,6 @@
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
 
-"@ionic/core@^4.0.0":
-  version "4.11.10"
-  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-4.11.10.tgz#1aa5f2e31b8d0c741471af9c272964c34155ab5a"
-  integrity sha512-PeonKl5E+VOTBeKDr83y0N/1wbfkZ5jV3PSJTsVPE3Q15LxGEO0GzBvVMgkmkssuqOI3WJPXxYWZVL8ejzSFOQ==
-  dependencies:
-    ionicons "^4.6.3"
-    tslib "^1.10.0"
-
-"@ionic/vue@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-0.0.4.tgz#9a4c90eab26cf82746f81f612a32688f6a5f6094"
-  integrity sha512-SlLb9nhFcsUQ2u0cfZJBTEICp6bUghEGY2w/iP0RLnXjkdK5ht5Cu4pJrT4FIzrEpZ5rlf50x244pT3xV+yZJg==
-  dependencies:
-    "@ionic/core" "^4.0.0"
-
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.npm.taobao.org/@mrmlnc/readdir-enhanced/download/@mrmlnc/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -4515,16 +4500,6 @@ invariant@^2.2.2, invariant@^2.2.4:
   dependencies:
     loose-envify "^1.0.0"
 
-ionicons@4.5.9-1:
-  version "4.5.9-1"
-  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-4.5.9-1.tgz#3db9688da88b39aff26322eae00f74aa69a37150"
-  integrity sha512-jR95cFGkPwNoH3MmoMF7qO+wMRgr7RdDG4Zuy+3WA6dnochfaZ1BisIC1TB3XLydy5cShxAK5eHqaSHcRkUHPQ==
-
-ionicons@^4.6.3:
-  version "4.6.3"
-  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-4.6.3.tgz#e4f3a3e9b66761eb8c0db27798cc1a8ce97777d2"
-  integrity sha512-cgP+VIr2cTJpMfFyVHTerq6n2jeoiGboVoe3GlaAo5zoSBDAEXORwUZhv6m+lCyxlsHCS3nqPUE+MKyZU71t8Q==
-
 ip-regex@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/ip-regex/download/ip-regex-2.1.0.tgz#fa78bf5d2e6913c911ce9f819ee5146bb6d844e9"
@@ -8022,7 +7997,7 @@ ts-pnp@^1.1.6:
   resolved "https://registry.npm.taobao.org/ts-pnp/download/ts-pnp-1.2.0.tgz?cache=0&sync_timestamp=1585245672319&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fts-pnp%2Fdownload%2Fts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
   integrity sha1-pQCtCEsHmPHDBxrzkeZZEshrypI=
 
-tslib@^1.10.0, tslib@^1.9.0:
+tslib@^1.9.0:
   version "1.13.0"
   resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
   integrity sha1-yIHhPMcBWJTtkUhi0nZDb6mkcEM=
@@ -8288,11 +8263,6 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npm.taobao.org/vary/download/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
-
-vee-validate@^3.3.6:
-  version "3.3.6"
-  resolved "https://registry.yarnpkg.com/vee-validate/-/vee-validate-3.3.6.tgz#5acc233729dfa05356f4c197fb2fa7c694332464"
-  integrity sha512-pR57GERMYbc45n5i2LEM7NG7KfSF6sR/XBGD3OBzlnRoMTACjsqgqK0NNTU7VZcFwpK78ZVaAOnPOhU1Lk95Uw==
 
 vendors@^1.0.0:
   version "1.0.4"

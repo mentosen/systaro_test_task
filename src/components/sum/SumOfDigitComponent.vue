@@ -11,7 +11,7 @@
 </template>
 
 <script>
-    import {sumDigits} from "@/api/serverApi";
+    import {sumDigits} from "@/api/sumApi";
 
     export default {
         name: "SumOfDigit",

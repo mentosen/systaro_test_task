@@ -1,4 +1,4 @@
-package test_task
+package test_task.dto
 
 class SumDto {
     int inputNumber

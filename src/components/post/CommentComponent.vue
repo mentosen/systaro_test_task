@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    import {getComments} from "@/api/mainApi";
+    import {getComments} from "@/api/jsonPlaceHolderApi";
 
     export default {
         name: "Comment",

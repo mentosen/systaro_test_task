@@ -8,9 +8,6 @@ import VueRouter from 'vue-router';
 
 import router from '@/router';
 
-import Ionic from '@ionic/vue';
-import '@ionic/core/css/ionic.bundle.css';
-
 Vue.config.productionTip = false;
 
 new Vue({
@@ -21,6 +18,3 @@ new Vue({
 Vue.component('paginate', Paginate);
 
 Vue.use(VueRouter);
-Vue.use(Ionic);
-
-Vue.config.ignoredElements = [/^ion-/];

@@ -7,7 +7,7 @@
                    v-model="email"
                    @input="checkEmail"
             />
-            <ion-icon v-if="isChecked" name="checkbox-outline"></ion-icon>
+            <ion-icon v-if="isChecked" name="checkbox-outline" class="success"></ion-icon>
         </div>
         <span class="container__item">The entire email address: {{email}}</span>
         <span class="container__item">First part (before the @) of the email address: {{emailFirstPart}}</span>
@@ -52,8 +52,8 @@
     }
 </script>
 
-<style scoped>
-    ion-icon {
+<style lang="scss" scoped>
+    .success {
         color: green;
     }
 </style>
