@@ -1,6 +1,6 @@
 # systaro_test_task
 
-##Front end side
+## Front end side
 ## Project setup
 ```
 yarn install
@@ -24,7 +24,7 @@ yarn lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-##Back end side 
+## Back end side 
 ```
 Please use Spring Boot Configuration. 
 It is in Run/Debug Configuration. 
