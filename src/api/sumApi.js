@@ -1,9 +1,5 @@
-import axios from 'axios'
-
-const service = axios.create({
-    baseURL: 'http://localhost:8081/api',
-});
+import request from './request';
 
 export function sumDigits(params) {
-    return service.post("/sum", params)
+    return request.post('/sum', params)
 }

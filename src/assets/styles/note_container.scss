@@ -1,0 +1,28 @@
+@import "palette";
+
+.noteContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: $default-primary-color;
+
+  &_row {
+    flex-direction: row;
+  }
+
+  &_padding {
+    padding: 8px;
+  }
+
+  &__date {
+    color: $light-primary-color;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    align-self: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}

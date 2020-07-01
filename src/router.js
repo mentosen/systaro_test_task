@@ -16,6 +16,10 @@ export const constantRoutes = [
     {
         path:'/task/3',
         component: () => import('@/components/email/EmailComponent')
+    },
+    {
+        path:'/notes',
+        component: () => import('@/components/note/NoteContainerComponent')
     }
 ];
 

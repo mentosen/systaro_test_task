@@ -4,8 +4,10 @@ import groovy.util.logging.Slf4j
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+import org.springframework.data.mongodb.config.EnableMongoAuditing
 
 @Slf4j
+@EnableMongoAuditing
 @SpringBootApplication(exclude = [SecurityAutoConfiguration.class])
 class Application {
 

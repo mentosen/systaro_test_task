@@ -1,10 +1,5 @@
 <template>
   <div id="app">
-      <div>
-          <button class="btn btn_margin-right" @click="pushByRoute('/')">Task 1</button>
-          <button class="btn btn_margin-right" @click="pushByRoute('/task/2')">Task 2</button>
-          <button class="btn" @click="pushByRoute('/task/3')">Task 3</button>
-      </div>
     <router-view/>
   </div>
 </template>
@@ -12,16 +7,12 @@
 <script>
 
 export default {
-  name: 'App',
-  methods: {
-    pushByRoute(path){
-      this.$router.push(path);
-    }
-  }
+  name: 'App'
 }
 </script>
 
-<style>
+<style lang="scss">
+  @import "assets/styles/palette.scss";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

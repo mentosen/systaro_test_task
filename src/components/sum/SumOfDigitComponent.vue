@@ -1,5 +1,7 @@
 <template>
     <div class="container">
+        <task-button-component/>
+
         <label class="container__item" for="inputNumber">Input number</label>
         <input class="container__item" id="inputNumber"
                type="number"
@@ -12,9 +14,11 @@
 
 <script>
     import {sumDigits} from "@/api/sumApi";
+    import TaskButtonComponent from "@/components/common/TaskButtonComponent";
 
     export default {
         name: "SumOfDigit",
+        components: {TaskButtonComponent},
         data(){
             return {
                 number: 0,

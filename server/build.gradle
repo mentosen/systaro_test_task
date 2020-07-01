@@ -15,10 +15,12 @@ repositories {
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.3.11'
 
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.2.3.RELEASE'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.2.3.RELEASE'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.2.1.RELEASE'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.2.3.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.3.1.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.3.1.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.3.1.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.3.1.RELEASE'
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.3.1.RELEASE'
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

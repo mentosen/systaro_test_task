@@ -1,5 +1,7 @@
 <template>
     <div class="container">
+        <task-button-component/>
+
         <label class="container__item" for="inputNumber">Input email</label>
         <div>
             <input class="container__item container_margin-right" id="inputNumber"
@@ -17,8 +19,11 @@
 </template>
 
 <script>
+    import TaskButtonComponent from "@/components/common/TaskButtonComponent";
+
     export default {
         name: "Email",
+        components: {TaskButtonComponent},
         data(){
             return {
                 email: "",

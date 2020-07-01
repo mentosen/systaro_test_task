@@ -1,5 +1,7 @@
 <template>
     <div class="mainContainer">
+        <task-button-component/>
+
         <h1>Posts:</h1>
         <div v-for="post in postsPerPage" :key="post.id" class="postContainer postContainer_padding">
             <span class="postContainer__title">{{post.title}}</span>
@@ -23,10 +25,11 @@
 <script>
     import {getPosts, getComments} from "@/api/jsonPlaceHolderApi";
     import Comment from "@/components/post/CommentComponent";
+    import TaskButtonComponent from "@/components/common/TaskButtonComponent";
 
     export default {
         name: "PostsPage",
-        components: {Comment},
+        components: {Comment, TaskButtonComponent},
         data(){
             return {
                 posts: [],

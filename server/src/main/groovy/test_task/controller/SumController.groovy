@@ -10,13 +10,12 @@ import test_task.dto.SumDto
 import test_task.service.SumService
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/sum")
 class SumController {
 
     @Autowired SumService sumService
 
-    @CrossOrigin
-    @PostMapping("/sum")
+    @PostMapping
     SumDto sumOfDigits(@RequestBody SumDto sumDto){
         return sumService.sumOfDigits(sumDto)
     }
