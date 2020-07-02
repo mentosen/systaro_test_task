@@ -44,7 +44,8 @@
         },
         methods: {
             update(){
-
+                let that = this;
+                that.$emit('update', that.note);
             },
             deleteNote(){
                 let that = this;

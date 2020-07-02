@@ -31,3 +31,8 @@ It is in Run/Debug Configuration.
 You need to add Spring Boot, specify Application main class, and then run.
 ```
 
+## Data base 
+```
+Download, install and run latest version of MongoDB
+```
+

@@ -26,3 +26,19 @@
     font-weight: bold;
   }
 }
+
+.note_placeholder {
+  display: flex;
+  border: 1px dashed $light-primary-color;
+  border-radius: 5px;
+  justify-content: center;
+  height: 40em;
+  align-items: center;
+  margin: 64px;
+
+  &__message {
+    color: $light-primary-color;
+    font-size: 32px;
+    font-family: 'Yellowtail', sans-serif;
+  }
+}

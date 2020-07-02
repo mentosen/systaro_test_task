@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Yellowtail');
+
+.note_create-header {
+  display: flex;
+
+  &__title {
+    font-size: 18px;
+  }
+}
+
+.note_create-body {
+  width: 100%;
+  font-size: 20px;
+  font-family: 'Yellowtail', sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.note_create-footer {
+  display: flex;
+  justify-content: flex-end;
+}

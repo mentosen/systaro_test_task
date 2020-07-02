@@ -1,35 +1,50 @@
 <template>
-    <div v-if="groupNotes.length > 0" class="noteContainer">
-        <div class="noteContainer" v-for="group in groupNotes" :key="group.date">
-            <span class="noteContainer__date">{{group.date}}</span>
-            <div class="noteContainer noteContainer_row">
-                <note-component v-for="note in group.notes" :key="note.id" :note="note" @get-notes="getAll"/>
+    <div>
+        <div v-if="groupNotes.length === 0" class="note_placeholder">
+            <span class="note_placeholder__message">Create your first note</span>
+        </div>
+        <div v-else class="noteContainer">
+            <div class="noteContainer" v-for="group in groupNotes" :key="group.date">
+                <span class="noteContainer__date">{{group.date}}</span>
+                <div class="noteContainer noteContainer_row">
+                    <note-component v-for="note in group.notes" :key="note.id" :note="note" @get-notes="getAll" @update="showUpdateModal"/>
+                </div>
             </div>
         </div>
-        <button class="btn btn__add-note" @click="isAddNote = true">+</button>
 
-        <modal v-if="isAddNote" @close="isAddNote = false">
-            <div slot="header" class="tile__row">
-                <span>Write your note</span>
+        <modal v-if="isShowNoteModal">
+            <div slot="header" class="note_create-header">
+                <span class="note_create-header__title">Write your note</span>
             </div>
 
             <div slot="body">
                 <textarea
-                        cols="100"
+                        class="note_create-body"
+                        v-model="message"
                         rows="10"
                 />
             </div>
 
-            <div slot="footer" class="tile__row tile__row--flex-end tile__row--padding-top">
-                <button>Save</button>
-                <button>Close</button>
+            <div slot="footer" class="note_create-footer">
+                <button v-if="isCreateNote"
+                        class="btn btn__create-block btn__create-block_green btn__create-block_margin-right"
+                        @click="create">
+                    Save
+                </button>
+                <button v-else
+                        class="btn btn__create-block btn__create-block_yellow btn__create-block_margin-right"
+                        @click="update">
+                    Update
+                </button>
+                <button class="btn btn__create-block btn__create-block_red" @click="close">Close</button>
             </div>
         </modal>
+        <button class="btn btn__add-note" @click="isShowNoteModal = true">+</button>
     </div>
 </template>
 
 <script>
-    import {getAll} from "@/api/noteApi";
+    import {getAll, create, update} from "@/api/noteApi";
     import NoteComponent from "@/components/note/NoteComponent";
     import moment from 'moment';
     import Modal from "@/components/common/ModalWindow";
@@ -43,7 +58,10 @@
         data(){
             return {
                 groupNotes: [],
-                isAddNote: false
+                isShowNoteModal: false,
+                isCreateNote: true,
+                message: "",
+                currentNote: {}
             }
         },
         mounted() {
@@ -75,6 +93,41 @@
                         notes: groups[date]
                     };
                 });
+            },
+            create(){
+                let that = this;
+                let params = {
+                    message: that.message.trim()
+                };
+
+                create(params).then(response => {
+                  that.getAll();
+                  that.close();
+                })
+            },
+            showUpdateModal(note){
+                let that = this;
+                debugger
+                that.isCreateNote = false;
+                that.isShowNoteModal = true;
+                that.message = note.message;
+
+                that.currentNote = note;
+            },
+            update(){
+                let that = this;
+                that.currentNote.message = that.message;
+
+                update(that.currentNote).then(response => {
+                    that.getAll();
+                    that.close();
+                })
+            },
+            close(){
+                let that = this;
+                that.isShowNoteModal = false;
+                that.isCreateNote = true;
+                that.message = "";
             }
         }
     }
