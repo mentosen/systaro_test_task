@@ -1,3 +1,4 @@
+@import "palette";
 .comment {
   display: flex;
   flex-direction: column;
@@ -5,6 +6,7 @@
   align-items: flex-start;
   margin-left: 16px;
   margin-top: 8px;
+  color: $text-primary-color;
 
   &_padding {
     padding: 8px;

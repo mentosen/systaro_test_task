@@ -1,12 +1,16 @@
+@import "palette";
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   padding-left: 100px;
+  color: $text-primary-color;
 
   &__item {
     margin-top: 8px;
+    color: $text-primary-color;
   }
 
   &_margin-right {

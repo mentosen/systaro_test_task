@@ -1,8 +1,11 @@
+@import "palette";
+
 .postContainer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  color: $text-primary-color;
 
   &_padding {
     padding: 8px;

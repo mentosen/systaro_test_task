@@ -1,7 +1,10 @@
+@import "palette";
+
 .mainContainer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding-left: 100px;
+  color: $text-primary-color;
 }

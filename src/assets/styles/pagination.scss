@@ -1,7 +1,9 @@
+@import "palette";
 .pagination {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  color: $text-primary-color;
 
   &--active {
     color: red;
